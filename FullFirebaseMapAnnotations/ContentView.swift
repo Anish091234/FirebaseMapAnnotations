@@ -6,11 +6,20 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
+    
+    @State private var selection = 0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            ListFirebaseView()
+                .tabItem {
+                    Label("Map", systemImage: "map.circle")
+                }
+            
+        }
     }
 }
 

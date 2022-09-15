@@ -19,6 +19,9 @@
 		51F9B77428CEAB4D008CEF18 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 51F9B77328CEAB4D008CEF18 /* FirebaseFirestore */; };
 		51F9B77628CEAB4D008CEF18 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 51F9B77528CEAB4D008CEF18 /* FirebaseFirestoreCombine-Community */; };
 		51F9B77828CEAB4D008CEF18 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 51F9B77728CEAB4D008CEF18 /* FirebaseFirestoreSwift */; };
+		51F9B77A28CEAC1E008CEF18 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51F9B77928CEAC1E008CEF18 /* GoogleService-Info.plist */; };
+		51F9B77C28CEAC6D008CEF18 /* CustomFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9B77B28CEAC6D008CEF18 /* CustomFirebaseService.swift */; };
+		51F9B77E28CEAD03008CEF18 /* ListFirebaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9B77D28CEAD03008CEF18 /* ListFirebaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		51F9B75B28CEAAF6008CEF18 /* FullFirebaseMapAnnotationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FullFirebaseMapAnnotationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F9B75F28CEAAF6008CEF18 /* FullFirebaseMapAnnotationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullFirebaseMapAnnotationsUITests.swift; sourceTree = "<group>"; };
 		51F9B76128CEAAF6008CEF18 /* FullFirebaseMapAnnotationsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullFirebaseMapAnnotationsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		51F9B77928CEAC1E008CEF18 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		51F9B77B28CEAC6D008CEF18 /* CustomFirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFirebaseService.swift; sourceTree = "<group>"; };
+		51F9B77D28CEAD03008CEF18 /* ListFirebaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFirebaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +112,10 @@
 			children = (
 				51F9B74428CEAAF5008CEF18 /* FullFirebaseMapAnnotationsApp.swift */,
 				51F9B74628CEAAF5008CEF18 /* ContentView.swift */,
+				51F9B77D28CEAD03008CEF18 /* ListFirebaseView.swift */,
+				51F9B77B28CEAC6D008CEF18 /* CustomFirebaseService.swift */,
 				51F9B74828CEAAF6008CEF18 /* Assets.xcassets */,
+				51F9B77928CEAC1E008CEF18 /* GoogleService-Info.plist */,
 				51F9B74A28CEAAF6008CEF18 /* Preview Content */,
 			);
 			path = FullFirebaseMapAnnotations;
@@ -253,6 +262,7 @@
 			files = (
 				51F9B74C28CEAAF6008CEF18 /* Preview Assets.xcassets in Resources */,
 				51F9B74928CEAAF6008CEF18 /* Assets.xcassets in Resources */,
+				51F9B77A28CEAC1E008CEF18 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				51F9B74728CEAAF5008CEF18 /* ContentView.swift in Sources */,
+				51F9B77E28CEAD03008CEF18 /* ListFirebaseView.swift in Sources */,
+				51F9B77C28CEAC6D008CEF18 /* CustomFirebaseService.swift in Sources */,
 				51F9B74528CEAAF5008CEF18 /* FullFirebaseMapAnnotationsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
