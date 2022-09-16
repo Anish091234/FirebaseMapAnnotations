@@ -23,6 +23,9 @@ struct ListFirebaseView: View {
     // Map Regions
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10))
     
+    @State var cityLat = 0.0
+    @State var cityLng = 0.0
+    
     // City Annotations
     var body: some View {
         
@@ -43,23 +46,37 @@ struct ListFirebaseView: View {
                         print(error)
                     }
                 }
-        }else {
+        } else {
             VStack {
-                List(annotations){ annotation in
-                    if let coord = annotation.coordinate{
-                        VStack{
-                            Text("Latitude = \(coord.latitude)")
-                            Text("Longitude = \(coord.longitude)")
-                        }
-                    }else {
-                        Text("Invalid Coordinate Value. Check firestore values for document \(annotation.id ?? "no id")")
-                    }
-                }
+                
+                ///How to list all of the saved annotations inside of the database
+                //List(annotations){ annotation in
+                //    if let coord = annotation.coordinate{
+                //        VStack{
+                //            Text("Latitude = \(coord.latitude)")
+                //            Text("Longitude = \(coord.longitude)")
+                //        }
+                //    }else {
+                //        Text("Invalid Coordinate Value. Check firestore values for document \(annotation.id ?? "no id")")
+                //    }
+                //}
+                
+                ///Attempting to create the annotations
                 ForEach(annotations) { annotation in
                     VStack {
                         Text(annotation.lat ?? "")
                         Text(annotation.lng ?? "")
                     }
+                    Button {
+                        // Adds the annotion to cityAnnotation
+                        cityAnnotations.append(City(name: "Annotation", coordinate: annotation.coordinate ?? CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)))
+                        
+                        
+                        print(" ------------ CityAnnotations after adding the ones inside of Firebase \(cityAnnotations) -------")
+                    } label: {
+                        Text("Convert and Send!")
+                    }
+
                 }
                 Map(coordinateRegion: $region, annotationItems: cityAnnotations) {
                     MapPin(coordinate: $0.coordinate)
@@ -67,15 +84,11 @@ struct ListFirebaseView: View {
                 .ignoresSafeArea()
                 
                 Button {
-                    //cityAnnotations.append(City(name: "Annotaion", coordinate: cityAnnotations))
                     print(cityAnnotations)
                 } label: {
                     Text("Press me for the thingy")
                 }
                 .buttonStyle(BorderedButtonStyle())
-            }
-            .onAppear {
-                //createAnnotations()
             }
         }
     }

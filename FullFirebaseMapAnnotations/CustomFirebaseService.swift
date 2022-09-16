@@ -9,6 +9,7 @@ import Foundation
 import FirebaseFirestoreSwift
 import FirebaseFirestore
 import CoreLocation
+
 //struct to keep the latitude and longitude together, they should not be in separate arrays
 struct Annotation: Codable, Identifiable{
     @DocumentID var id: String?
