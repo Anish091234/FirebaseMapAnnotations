@@ -14,7 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            ListFirebaseView()
+            ListFirebaseView(newAnnotations: Annotation)
                 .tabItem {
                     Label("Map", systemImage: "map.circle")
                 }

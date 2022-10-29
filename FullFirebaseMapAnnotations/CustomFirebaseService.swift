@@ -11,10 +11,10 @@ import FirebaseFirestore
 import CoreLocation
 
 //struct to keep the latitude and longitude together, they should not be in separate arrays
-struct Annotation: Codable, Identifiable{
+struct Annotation: Codable, Identifiable, Hashable {
     @DocumentID var id: String?
-    var lat: String?
-    var lng: String?
+    let lat: String?
+    let lng: String?
 }
 extension Annotation{
     //Safely unwrap the Strings into doubles and then create the coordinate
@@ -29,7 +29,7 @@ extension Annotation{
     }
 }
 
-struct CustomFirestoreService{
+struct CustomFirestoreService {
     let store: Firestore = .firestore()
     init(){}
     func getAnnotations() async throws -> [Annotation]{

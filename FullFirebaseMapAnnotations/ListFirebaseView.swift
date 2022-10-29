@@ -20,21 +20,20 @@ struct ListFirebaseView: View {
     let service: CustomFirestoreService = CustomFirestoreService()
     @State var annotations: [Annotation] = []
     
+    var newAnnotations: Annotation
+    
     // Map Regions
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10))
     
-    @State var cityLat = 0.0
-    @State var cityLng = 0.0
+    @State var cityAnnotations = [
+        City(name: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275)),
+        City(name: "Paris", coordinate: CLLocationCoordinate2D(latitude: 48.8567, longitude: 2.3508)),
+        City(name: "Rome", coordinate: CLLocationCoordinate2D(latitude: 41.9, longitude: 12.5)),
+        City(name: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667))
+    ]
     
     // City Annotations
     var body: some View {
-        
-        var cityAnnotations = [
-            City(name: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275)),
-            City(name: "Paris", coordinate: CLLocationCoordinate2D(latitude: 48.8567, longitude: 2.3508)),
-            City(name: "Rome", coordinate: CLLocationCoordinate2D(latitude: 41.9, longitude: 12.5)),
-            City(name: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667))
-        ]
         
         if annotations.isEmpty{
             Text("Need to fetch annotations")
@@ -92,10 +91,13 @@ struct ListFirebaseView: View {
             }
         }
     }
-}
-
-struct ListFirebaseView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListFirebaseView()
+    
+    func addAnnotation() {
+        
+        let newLat = Double(newAnnotations.lat ?? "")
+        let newLng = Double(newAnnotations.lng ?? "")
+        
+        cityAnnotations.append(City(name: "Annotation", coordinate: CLLocationCoordinate2D(latitude: newLat ?? 0.0, longitude: newLng ?? 0.0)))
     }
 }
+
