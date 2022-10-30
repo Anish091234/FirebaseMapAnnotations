@@ -9,17 +9,8 @@ import SwiftUI
 import Firebase
 
 struct ContentView: View {
-    
-    @State private var selection = 0
-    
     var body: some View {
-        TabView {
-            ListFirebaseView(newAnnotations: Annotation)
-                .tabItem {
-                    Label("Map", systemImage: "map.circle")
-                }
-            
-        }
+        ListFirebaseView()
     }
 }
 

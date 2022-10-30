@@ -15,8 +15,10 @@ struct Annotation: Codable, Identifiable, Hashable {
     @DocumentID var id: String?
     let lat: String?
     let lng: String?
+    var name: String
 }
-extension Annotation{
+
+extension Annotation {
     //Safely unwrap the Strings into doubles and then create the coordinate
     var coordinate: CLLocationCoordinate2D? {
         guard let latStr = lat, let lngStr = lng, let latitude = Double(latStr), let longitude = Double(lngStr) else{
