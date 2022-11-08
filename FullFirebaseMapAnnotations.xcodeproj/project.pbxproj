@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5106FD982918A50500B377FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5106FD972918A50500B377FC /* GoogleService-Info.plist */; };
+		51D049FA2919B3A00013BA31 /* CustomFirebaseServiceSoocer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D049F92919B3A00013BA31 /* CustomFirebaseServiceSoocer.swift */; };
 		51D508F52906174400016D4C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 51D508F42906174400016D4C /* FirebaseAnalytics */; };
 		51D508F72906174400016D4C /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 51D508F62906174400016D4C /* FirebaseAnalyticsOnDeviceConversion */; };
 		51D508F92906174400016D4C /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 51D508F82906174400016D4C /* FirebaseAnalyticsSwift */; };
@@ -35,7 +37,6 @@
 		51D509272906174400016D4C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 51D509262906174400016D4C /* FirebaseStorage */; };
 		51D509292906174400016D4C /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 51D509282906174400016D4C /* FirebaseStorageCombine-Community */; };
 		51D8395D290E035300B1FD97 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8395C290E035300B1FD97 /* City.swift */; };
-		51D8395F290E06CA00B1FD97 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51D8395E290E06CA00B1FD97 /* GoogleService-Info.plist */; };
 		51D83961290E084800B1FD97 /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D83960290E084800B1FD97 /* PlaceAnnotationView.swift */; };
 		51D83963290E08DB00B1FD97 /* LocationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D83962290E08DB00B1FD97 /* LocationDetailsView.swift */; };
 		51F9B74528CEAAF5008CEF18 /* FullFirebaseMapAnnotationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9B74428CEAAF5008CEF18 /* FullFirebaseMapAnnotationsApp.swift */; };
@@ -67,8 +68,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5106FD972918A50500B377FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		51D049F92919B3A00013BA31 /* CustomFirebaseServiceSoocer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFirebaseServiceSoocer.swift; sourceTree = "<group>"; };
 		51D8395C290E035300B1FD97 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
-		51D8395E290E06CA00B1FD97 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		51D83960290E084800B1FD97 /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationView.swift; sourceTree = "<group>"; };
 		51D83962290E08DB00B1FD97 /* LocationDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsView.swift; sourceTree = "<group>"; };
 		51F9B74128CEAAF5008CEF18 /* FullFirebaseMapAnnotations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullFirebaseMapAnnotations.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				51F9B77B28CEAC6D008CEF18 /* CustomFirebaseService.swift */,
+				51D049F92919B3A00013BA31 /* CustomFirebaseServiceSoocer.swift */,
 				51D8395C290E035300B1FD97 /* City.swift */,
 			);
 			path = Model;
@@ -160,8 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				51F9B74828CEAAF6008CEF18 /* Assets.xcassets */,
-				51D8395E290E06CA00B1FD97 /* GoogleService-Info.plist */,
 				51F9B74628CEAAF5008CEF18 /* ContentView.swift */,
+				5106FD972918A50500B377FC /* GoogleService-Info.plist */,
 				51F9B74428CEAAF5008CEF18 /* FullFirebaseMapAnnotationsApp.swift */,
 			);
 			path = App;
@@ -361,7 +364,7 @@
 			files = (
 				51F9B74C28CEAAF6008CEF18 /* Preview Assets.xcassets in Resources */,
 				51F9B74928CEAAF6008CEF18 /* Assets.xcassets in Resources */,
-				51D8395F290E06CA00B1FD97 /* GoogleService-Info.plist in Resources */,
+				5106FD982918A50500B377FC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +393,7 @@
 				51D8395D290E035300B1FD97 /* City.swift in Sources */,
 				51F9B77E28CEAD03008CEF18 /* ListFirebaseView.swift in Sources */,
 				51F9B77C28CEAC6D008CEF18 /* CustomFirebaseService.swift in Sources */,
+				51D049FA2919B3A00013BA31 /* CustomFirebaseServiceSoocer.swift in Sources */,
 				51D83963290E08DB00B1FD97 /* LocationDetailsView.swift in Sources */,
 				51F9B74528CEAAF5008CEF18 /* FullFirebaseMapAnnotationsApp.swift in Sources */,
 				51D83961290E084800B1FD97 /* PlaceAnnotationView.swift in Sources */,

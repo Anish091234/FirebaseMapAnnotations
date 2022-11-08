@@ -16,6 +16,7 @@ struct Annotation: Codable, Identifiable, Hashable {
     let lat: String?
     let lng: String?
     var name: String
+    var sport: String
 }
 
 extension Annotation {
@@ -25,13 +26,13 @@ extension Annotation {
             print("Unable to get valid latitude and longitude")
             return nil
         }
-        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)   
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         return coordinate
         
     }
 }
 
-struct CustomFirestoreService {
+struct CustomFirestoreService{
     let store: Firestore = .firestore()
     init(){}
     func getAnnotations() async throws -> [Annotation]{
